@@ -113,6 +113,7 @@ int main() {
     printf("Pontos Turísticos: %d\n", pontos_turisticos_2);
 
     printf(" \n");
+    printf("***Fim da aplicação\n");
 
     return 0;
 }
