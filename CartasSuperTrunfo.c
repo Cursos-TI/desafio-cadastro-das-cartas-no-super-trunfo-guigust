@@ -17,6 +17,10 @@ int main() {
     float pib_1;
     int pontos_turisticos_1;
 
+    // variáveis para calculo de PIB per Capita e Densidade Populacional
+    float densidade_1;
+    float pib_percapita_1;
+
     //Carta 2
     char estado_2[10];
     char codigo_carta_2[5];
@@ -25,6 +29,10 @@ int main() {
     float area_2;
     float pib_2;
     int pontos_turisticos_2;
+    // variáveis para calculo de PIB per Capita e Densidade Populacional
+    float densidade_2;
+    float pib_percapita_2;
+    
 
     printf("Iniciando o cadastro das cartas do Jogo:\n");
     printf(" \n");
@@ -61,6 +69,10 @@ int main() {
     printf("Inorme a quantidade de Pontos Turísticos da cidade: ");
     scanf("%d", &pontos_turisticos_1);
 
+    // Calculando Densidade e PIB per Capita
+    densidade_1 = (float)populacao_1 / area_1;
+    pib_percapita_1 = ((pib_1 * 1000000000) / populacao_1);
+
     printf(" \n");
     // Carta 2
     printf("Insira os dados da Carta 2\n");
@@ -88,6 +100,10 @@ int main() {
     printf("Inorme a quantidade de Pontos Turísticos da cidade: ");
     scanf("%d", &pontos_turisticos_2);
 
+    // Calculando Densidade e PIB per Capita
+    densidade_2 = populacao_2 / area_2;
+    pib_percapita_2 = ((pib_2 * 1000000000) / populacao_2);
+
     // Exibindo dados das cartas cadastradas
     printf(" \n");
     printf("Exibindo dados das Cartas\n");
@@ -101,6 +117,8 @@ int main() {
     printf("Área: %.2f km²\n", area_1);
     printf("PIB: %.2f bilhôes de reais\n", pib_1);
     printf("Pontos Turísticos: %d\n", pontos_turisticos_1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade_1);
+    printf("PIB per Capita: %.2f reais\n", pib_percapita_1);
 
     printf(" \n");
     printf("Carta 2\n");
@@ -111,6 +129,8 @@ int main() {
     printf("Área: %.2f km²\n", area_2);
     printf("PIB: %.2f bilhôes de reais\n", pib_2);
     printf("Pontos Turísticos: %d\n", pontos_turisticos_2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidade_2);
+    printf("PIB per Capita: %.2f reais\n", pib_percapita_2);
 
     printf(" \n");
     printf("***Fim da aplicação\n");
